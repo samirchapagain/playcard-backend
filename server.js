@@ -18,6 +18,9 @@ let games = [];
 let currentGame = null;
 
 // Routes
+app.get('/', (req, res) => {
+  res.json({ message: 'Playcard Backend API', status: 'running' });
+});
 app.post('/api/games', (req, res) => {
   try {
     const { players } = req.body;
