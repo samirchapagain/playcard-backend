@@ -7,8 +7,8 @@ const PORT = process.env.PORT || 5000;
 
 // Enhanced CORS for PWA and mobile
 app.use(cors({
-  origin: true,
-  credentials: true,
+  origin: '*',
+  credentials: false,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
